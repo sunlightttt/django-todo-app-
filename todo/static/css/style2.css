@@ -1,0 +1,247 @@
+/* static/css/style.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    padding: 30px 15px;
+}
+
+.signup-login {
+    width: 100%;
+    max-width: 750px;
+    margin: auto;
+}
+
+.signup-login h1 {
+    color: #fff;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.signup-login > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.signup-login > div:first-child a {
+    text-decoration: none;
+    background: #fff;
+    color: #764ba2;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.signup-login > div:first-child a:hover {
+    background: #f3f3f3;
+}
+
+.signup-box {
+    background: #fff;
+    border-radius: 22px;
+    padding: 28px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.heading {
+    font-size: 28px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 22px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.inp {
+    flex: 1;
+    padding: 14px 16px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    outline: none;
+    font-size: 15px;
+    transition: 0.3s ease;
+}
+
+.inp:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15);
+}
+
+.submit-button {
+    padding: 14px 20px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+    white-space: nowrap;
+}
+
+.submit-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 18px rgba(102, 126, 234, 0.25);
+}
+
+.Todo {
+    background: #f8f9ff;
+    border: 1px solid #ececff;
+    border-radius: 16px;
+    padding: 18px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    transition: 0.3s ease;
+}
+
+.Todo:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.06);
+}
+
+.Todo h5 {
+    min-width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.Todo p {
+    flex: 1;
+    font-size: 16px;
+    color: #222;
+    word-break: break-word;
+}
+
+.Todo div {
+    display: flex;
+    gap: 10px;
+}
+
+.Todo a {
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.Todo a:first-child {
+    background: #eef2ff;
+    color: #4f46e5;
+}
+
+.Todo a:last-child {
+    background: #fff1f2;
+    color: #e11d48;
+}
+
+.Todo a:hover {
+    transform: translateY(-1px);
+}
+
+p {
+    text-align: center;
+    color: #777;
+    margin-top: 10px;
+}
+
+/* edit page form center */
+.signup-box form:only-child,
+.signup-box .heading + form {
+    display: flex;
+    gap: 12px;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+    .signup-login h1 {
+        font-size: 24px;
+    }
+
+    .signup-box {
+        padding: 22px;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    .submit-button {
+        width: 100%;
+    }
+
+    .Todo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .Todo h5 {
+        min-width: 35px;
+        height: 35px;
+    }
+
+    .Todo div {
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 20px 10px;
+    }
+
+    .signup-login > div:first-child {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .signup-box {
+        padding: 18px;
+        border-radius: 16px;
+    }
+
+    .heading {
+        font-size: 24px;
+    }
+
+    .inp {
+        font-size: 14px;
+        padding: 12px 14px;
+    }
+
+    .Todo p {
+        font-size: 15px;
+    }
+
+    .Todo a {
+        font-size: 13px;
+        padding: 8px 12px;
+    }
+}

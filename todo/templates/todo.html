@@ -1,0 +1,48 @@
+<!-- todo.html -->
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Page</title>
+<link rel="stylesheet" href="{% static 'css/style2.css' %}">
+
+
+</head>
+<body>
+    <div class="signup-login">
+        <div>
+            <h1>Hello {{ user }}</h1>
+            <a href="/logoutt">Logout</a>
+        </div>
+
+        <div class="signup-box">
+            <div class="heading">
+                My Todo List
+            </div>
+
+            <form method="post">
+                {% csrf_token %}
+                <input type="text" class="inp" name="title" required placeholder="Add today task">
+                <input type="submit" class="submit-button" value="Add Task">
+            </form>
+
+            {% for todo in res %}
+            <div class="Todo">
+                <h5>{{ todo.srno }}</h5>
+                <p>{{ todo.title }}</p>
+                <div>
+                    <a href="/edit_todo/{{ todo.srno }}">Edit</a>
+                    <a href="/delete_todo/{{ todo.srno }}">Delete</a>
+                </div>
+            </div>
+            {% empty %}
+            <p>No tasks available</p>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
